@@ -2,7 +2,7 @@ package application;
 
 import chess.ChessPiece;
 import chess.ChessPosition;
-import chess.Color;
+import chess.Colors;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -60,13 +60,7 @@ public class UI {
         if (piece == null) {
             System.out.print("-");
         } else {
-            System.out.print(piece);
-        }
-        System.out.print(" ");
-        if (piece == null) {
-            System.out.print("-");
-        } else {
-            if (piece.getColor() == Color.WHITE) {
+            if (piece.getColor() == Colors.WHITE) {
                 System.out.print(ANSI_WHITE + piece + ANSI_RESET);
             } else {
                 System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
